@@ -1,4 +1,7 @@
 function calculateParallelogramArea() {
+
+  //function called(getInputValueById) , arguments given to paramter then returned
+
   const base = getInputValueById("parallelogram-base");
   console.log("base value", base);
   const height = getInputValueById("parallelogram-height");
