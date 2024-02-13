@@ -1,0 +1,40 @@
+function calculateParallelogramArea() {
+
+    const base = getparallelogrambase();
+    console.log(base);
+  
+
+    const height = getparallelogramHeight();
+    console.log(height);
+  
+
+  //calculation
+
+  const area= base * height;
+
+  const parallelogramAreaSpan = document.getElementById("parallelogram-area");
+  parallelogramAreaSpan.innerText=area;
+
+
+ 
+}
+
+function getparallelogrambase(){
+  //base input
+  const parallelogramBaseInput = document.getElementById("parallelogram-base");
+  const parallelogramBaseText = parallelogramBaseInput.value;
+  const base = parseFloat(parallelogramBaseText);
+  return base;
+}
+
+function getparallelogramHeight(){
+  //height input
+  const parallelogramHeightInput = document.getElementById(
+    "parallelogram-height"
+  );
+  const parallelogramHeightText = parallelogramHeightInput.value;
+  const height = parseFloat(parallelogramHeightText);
+    return height;
+}
+
+

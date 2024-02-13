@@ -1,21 +1,24 @@
 function calculateParallelogramArea() {
-  //base input
-  const parallelogramBaseInput = document.getElementById("parallelogram-base");
-  const parallelogramBaseText = parallelogramBaseInput.value;
-  const base = parseFloat(parallelogramBaseText);
+  const base = getInputValueById("parallelogram-base");
+  console.log("base value", base);
+  const height = getInputValueById("parallelogram-height");
+  console.log("Height value", height);
 
-  //height input
-  const parallelogramHeightInput = document.getElementById("parallelogram-height");
-  const parallelogramHeightText=parallelogramHeightInput.value;
-  height=parseFloat(parallelogramHeightText);
+  const area = base * height;
 
-  //calculation
+  console.log("Area of the parallelogram is:", area);
 
-  const area= base * height;
+  setInnerTextById("parallelogram-area", area);
+}
 
-  const parallelogramAreaSpan = document.getElementById("parallelogram-area");
-  parallelogramAreaSpan.innerText=area;
+function getInputValueById(inputFieldId) {
+  const inputField = document.getElementById(inputFieldId);
+  const inputValueText = inputField.value;
+  const inputValue = parseFloat(inputValueText);
+  return inputValue;
+}
 
-
- 
+function setInnerTextById(elementId, area) {
+  const element = document.getElementById(elementId);
+  element.innerText = area;
 }
